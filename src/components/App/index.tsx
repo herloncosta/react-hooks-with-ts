@@ -11,7 +11,8 @@ export function App() {
     valueY!.current!.value = "";
   };
 
-  const handleCalc = useCallback(() => {
+  const handleCalc = useCallback((e: any) => {
+    e.preventDefault();
     setResult(0);
     const total =
       Number(valueX?.current?.value) + Number(valueY?.current?.value);
